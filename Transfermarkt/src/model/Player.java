@@ -1,6 +1,9 @@
 package model;
 
 public class Player extends Person{
+
+    private static int counter =0;
+    private int id;
     private String position;
     private int shirtNumber;
     private double value;
@@ -56,8 +59,15 @@ public class Player extends Person{
         this.value = value;
     }
 
+
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString(){
         return super.toString() + ", Position: " + position + ", Value: " + value;
     }
+
+
 }

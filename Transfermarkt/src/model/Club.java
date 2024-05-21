@@ -3,6 +3,10 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 public class Club {
+
+    private static int counter=0;
+
+    private int id;
     private String clubName;
     private int foundedYear;
     private Stadium stadium;
@@ -22,6 +26,12 @@ public class Club {
         this.coach = coach;
         this.league = league;
         this.players = new ArrayList<>();
+    }
+
+    public Club(String clubName, int foundedYear, Stadium stadiumId, League leagueId, double teamValue, int numberOfPlayers) {
+    }
+
+    public Club(int id, String clubName, int foundedYear, Stadium stadium, League league, double teamValue, int numberOfPlayers) {
     }
 
     public void addPlayer(Player player){
@@ -88,6 +98,14 @@ public class Club {
 
     public void setTeamValue(double teamValue) {
         this.teamValue = teamValue;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

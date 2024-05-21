@@ -1,6 +1,10 @@
 package model;
 
 public class Coach extends Person{
+
+    private static int counter=0;
+
+    private int id;
     private Club club;
     private int experience;
     private String preferredFormation;
@@ -19,6 +23,9 @@ public class Coach extends Person{
         this.club = club;
         this.experience = experience;
         this.preferredFormation = preferredFormation;
+    }
+
+    public Coach(String lastName, String firstName, int age, String nationality, int experience, String preferredFormation, Club club) {
     }
 
     public Club getClub() {
@@ -43,6 +50,10 @@ public class Coach extends Person{
 
     public void setPreferredFormation(String preferredFormation) {
         this.preferredFormation = preferredFormation;
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override

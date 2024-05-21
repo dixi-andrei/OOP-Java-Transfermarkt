@@ -2,6 +2,10 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 public class League {
+
+    private static int counter=0;
+
+    private int id;
     private String leagueName;
     private String leagueCountry;
     private int foundedYear;
@@ -69,6 +73,14 @@ public class League {
 
     public void setLeagueValue(double leagueValue) {
         this.leagueValue = leagueValue;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

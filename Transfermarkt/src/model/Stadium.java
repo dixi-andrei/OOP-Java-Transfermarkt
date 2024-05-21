@@ -2,6 +2,10 @@ package model;
 
 public class Stadium {
     private String stadiumName;
+
+    private int id;
+
+    private static int counter =0;
     private String stadiumTown;
     private int capacity;
 
@@ -36,5 +40,23 @@ public class Stadium {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Stadium{" +
+                "stadiumName='" + stadiumName + '\'' +
+                ", id=" + id +
+                ", stadiumTown='" + stadiumTown + '\'' +
+                ", capacity=" + capacity +
+                '}';
     }
 }
